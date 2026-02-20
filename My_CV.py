@@ -118,7 +118,7 @@ st.markdown("""
 
 # --- 3. 側邊欄：個人資訊 ---
 with st.sidebar:
-    st.image("https://api.dicebear.com/9.x/avataaars/svg?seed=Felix&clothing=blazerAndShirt&glasses=prescription02", width=150)
+    #st.image("https://api.dicebear.com/9.x/avataaars/svg?seed=Felix&clothing=blazerAndShirt&glasses=prescription02", width=150)
     
     st.title("Jacobs Ting")
     st.markdown("**Senior RF Engineer**")
