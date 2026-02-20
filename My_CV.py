@@ -344,7 +344,7 @@ elif folder == 'RFTool':
         
         col1, col2 = st.columns([1.5, 1])
         with col1:
-            st.info("🎥 (請在此處上傳影片：pa_sim_demo.mp4)")
+            st.video("PA_EVM.mp4")
             # 範例: st.video("pa_sim_demo.mp4")
             
         with col2:
@@ -362,7 +362,7 @@ elif folder == 'RFTool':
         
         col1, col2 = st.columns([1.5, 1])
         with col1:
-            st.video("AI_Filter.mov")
+            st.video("Auto_Filter.mp4")
             # 範例: st.image("filter.png")
             
         with col2:
@@ -380,7 +380,7 @@ elif folder == 'RFTool':
         
         col1, col2 = st.columns([1.5, 1])
         with col1:
-            st.info("🎥 (請在此處上傳影片：auto_match_demo.mp4)")
+            st.video("Auto_Smith.mp4")
             # 範例: st.video("matching.mp4")
             
         with col2:
