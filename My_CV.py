@@ -118,7 +118,7 @@ st.markdown("""
 
 # --- 3. 側邊欄：個人資訊 ---
 with st.sidebar:
-    #st.image("https://api.dicebear.com/9.x/avataaars/svg?seed=Felix&clothing=blazerAndShirt&glasses=prescription02", width=150)
+    st.image("My Image.png", width=200)
     
     st.title("Jacobs Ting")
     st.markdown("**Senior RF Engineer**")
@@ -141,7 +141,7 @@ with st.sidebar:
     st.markdown("#### 🎓 Education")
     st.markdown("**Master's Degree**")
     st.caption("National Chung Hsing University (NCHU)")
-    st.caption("Major in Electronics / Communication System")
+    st.caption("Major in Communication System")
     
     st.markdown("---")
     
@@ -236,7 +236,7 @@ elif folder == 'Experience':
         company="Wistron / FIT(Present)",
         products="5G NR Handheld Device / WiFi 6E Device / BT wearable device",
         responsibility="• Leading a 4-person RF team.<br>• RFI/RFQ Process.<br>• RF System Architecture Plan.<br>• Cross-Departmental Coordination.<br>• Communicating With Customers.<br>• AI-Assisted Design Tool Development.",
-        contribution="★ <b>Python Automation:</b> Developed AI-assisted tools reducing simulation time by 30%.<br>★ <b>Talent Growth:</b> Mentored 2 junior engineers to Senior level."
+        contribution="★ <b>Python Automation:</b> Developed AI-assisted tools reducing simulation time .<br>★ <b>Lead Project:</b> Complete 4 Projects on schedule."
     ), unsafe_allow_html=True)
 
     # 經歷 2
@@ -277,6 +277,25 @@ elif folder == 'Project':
         * 🌡️ **High pass yield** for MP stage.
         * 📉 **Long Life cycle** with discrete components design. 
         """)
+        
+        # --- 新增的附件下載欄位 ---
+        st.markdown("---")
+        st.markdown("#### 📎 Project Presentation")
+        
+        # 💡 [使用說明]：將您的 PDF 或 PPT 檔案放在同一個資料夾，並把檔名改為 "Project_Details.pdf"
+        try:
+            with open("Project_Details.pdf", "rb") as file:
+                st.download_button(
+                    label="📥 Download Presentation",
+                    data=file,
+                    file_name="Project_Details.pdf.pdf",
+                    mime="application/pdf" # 若上傳的是 PPTX，可將此行刪除或保持預設
+                )
+        except FileNotFoundError:
+            # 如果資料夾裡還沒有放檔案，就會顯示這段提示，而不會讓網頁崩潰
+            st.info("💡 [提示]：將您的 PDF/PPT 檔案命名為 `Project_Details.pdf` 並上傳至 GitHub，下載按鈕就會自動出現！")
+        # ------------------------
+
     with c2:
         st.info("Technical Keywords")
         st.markdown("""
